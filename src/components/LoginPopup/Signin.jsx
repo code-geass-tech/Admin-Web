@@ -7,7 +7,7 @@ const Signin = ({ handleSignIn }) => {
   return (
     <>
       <div className={"p-4"}>
-        <h1 className="text-2xl text-gray-600 font-semibold text-center mb-4">
+        <h1 className="text-2xl text-gray-600 font-semibold text-center mb-4 ">
           Create Your Account
         </h1>
         <form className="flex flex-col gap-3">

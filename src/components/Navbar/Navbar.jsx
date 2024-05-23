@@ -1,65 +1,28 @@
 import React from "react";
-import Logo from "../../assets/caridentlogo.png";
+import Logo from "../../assets/caridentlogo2.png";
 
-const Navbar = ({ handleLoginPopup }) => {
+const Navbar = ({ handleLoginPopup, isDarkTheme, toggleTheme }) => {
   return (
     <>
-      <main className="shadow-lg bg-white/70 backdrop-blur-sm">
+      <main className="shadow-lg bg-white/70 backdrop-blur-sm dark:bg-gray-900/70">
         <div className="container">
           <nav className="flex justify-between items-center">
-            <a href="#" className="text-gray-800 text-3xl font-bold">
-              <img src={Logo} alt="Logo" className="h-10 inline mr-1" />
+            <a href="#" className="text-gray-800 dark:text-white text-3xl font-bold mt-2">
+              <img src={Logo} alt="Logo" className="h-10 inline mr-1 mb-3" />
               Carident
             </a>
-            <div className="hidden sm:block">
-              <ul className="flex font-semibold  justify-center items-center gap-4">
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 hover:text-gray-900 px-4 py-4 inline-block select-none"
-                  >
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 hover:text-gray-900 px-4 py-4 inline-block select-none"
-                  >
-                    About
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    className="text-gray-700 hover:text-gray-900 px-4 py-4 inline-block select-none"
-                  >
-                    Contact
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#"
-                    onClick={handleLoginPopup}
-                    className="text-gray-700 hover:text-gray-900 px-4 py-4 inline-block select-none"
-                  >
-                    Login
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="block sm:hidden">
-              <ul className="flex text-xl font-semibold  justify-center items-center gap-4">
-                <li>
-                  <a
-                    href="#"
-                    onClick={handleLoginPopup}
-                    className="text-gray-700 hover:text-gray-900 px-4 py-4 inline-block"
-                  >
-                    Login
-                  </a>
-                </li>
-              </ul>
+            <div className="flex items-center">
+              <label className="switch">
+                <input type="checkbox" checked={isDarkTheme} onChange={toggleTheme} />
+                <span className="slider round"></span>
+              </label>
+              <a
+                href="#"
+                onClick={handleLoginPopup}
+                className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-4 py-4 inline-block select-none"
+              >
+                Login
+              </a>
             </div>
           </nav>
         </div>
