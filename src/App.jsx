@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import LoginPopup from "./components/LoginPopup/LoginPopup";
-import Services from "./components/Services/Services";
 import Hero from "./components/Hero/Hero";
 
 import { ThemeProvider } from "@/components/theme-provider"

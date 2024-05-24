@@ -30,9 +30,9 @@ const LoginPopup = ({ loginPopup, handleLoginPopup }) => {
       {loginPopup && (
         <div
           ref={loginPopupRef}
-          className="fixed top-0 left-0 w-full h-full z-50 overflow-y-auto"
+          className="fixed top-0 left-0 w-full h-full z-50 overflow-y-auto dark:bg-dark"
         >
-          <div className="p-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-2xl shadow-md w-[90%] sm:w-auto mx-auto bg-white ">
+          <div className="p-3 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-2xl shadow-md w-[90%] sm:w-auto mx-auto bg-white dark:bg-black ">
             <div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center sm:w-[600px] md:w-[700px] relative">
                 {showSignIn ? (
