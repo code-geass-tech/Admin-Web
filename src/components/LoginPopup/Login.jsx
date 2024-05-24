@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaEye, FaEyeSlash, FaLinkedinIn } from "react-icons/fa";
 import { Input } from "@/components/ui/input"
-
+import { Label } from '@/components/ui/label'
 
 const Login = ({ handleSignIn }) => {
   const [showPassword, setShowPassword] = useState(false);
@@ -13,22 +13,16 @@ const Login = ({ handleSignIn }) => {
         <h1 className="mb-4 text-center text-2xl font-semibold text-gray-600">
           Log in
         </h1>
-        <Input type="email" placeholder="Email" />
         <form className="flex flex-col gap-3 p-3">
           <div>
-            <label for="username" className="input-label">
-              Username
-            </label>
-            <input id="username" type="text" className="input" />
+            <Label htmlFor="email">Email</Label>
+            <Input type="email" placeholder="Enter your email" /> 
           </div>
           <div>
-            <label for="password" className="input-label">
-              Password
-            </label>
+          <Label htmlFor="email">Password</Label>
             <div className="relative">
-              <input
-                className="input pr-8"
-                id="password"
+              <Input
+                placeholder="Enter your password"
                 type={showPassword ? "text" : "password"}
               />
 

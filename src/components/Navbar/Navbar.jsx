@@ -3,7 +3,7 @@ import Logo from "../../assets/caridentlogo2.png";
 import { ModeToggle } from "../mode-toggle";
 import { Button } from "../ui/button";
 
-const Navbar = ({ handleLoginPopup, isDarkTheme, toggleTheme }) => {
+const Navbar = ({ handleLoginPopup }) => {
   return (
     <>
       <main className="shadow-lg bg-white/70 backdrop-blur-sm dark:bg-gray-900/70">
@@ -13,16 +13,9 @@ const Navbar = ({ handleLoginPopup, isDarkTheme, toggleTheme }) => {
               <img src={Logo} alt="Logo" className="h-10 inline mr-1 mb-3" />
               Carident
             </a>
-            <div className="flex items-center">
+            <div className="flex gap-2 items-center">
               <ModeToggle />
-              <a
-                href="#"
-                onClick={handleLoginPopup}
-                className="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white px-4 py-4 inline-block select-none"
-              >
-                Login
-              </a>
-              <Button>Test</Button>
+              <Button onClick={handleLoginPopup}>Login</Button>
             </div>
           </nav>
         </div>
