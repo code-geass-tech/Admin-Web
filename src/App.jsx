@@ -6,7 +6,6 @@ import Hero from "./components/Hero/Hero";
 
 import { ThemeProvider } from "@/components/theme-provider"
 
-
 const App = () => {
   const [loginPopup, setLoginPopup] = useState(false);
   const [isDarkTheme, setIsDarkTheme] = useState(true); // Default to dark theme
@@ -22,7 +21,7 @@ const App = () => {
   return (
     <>
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <div className={`${loginPopup ? "blur-sm bg-black/30" : ""} ${isDarkTheme ? "dark" : ""}`}>
+      <div className={`${loginPopup ? "blur-sm bg-black/30" : ""}`}>
         <div>
           <Navbar handleLoginPopup={handleLoginPopup} isDarkTheme={isDarkTheme} toggleTheme={toggleTheme} />
           <Hero handleLoginPopup={handleLoginPopup} isDarkTheme={isDarkTheme} />

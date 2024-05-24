@@ -1,5 +1,7 @@
 import React from "react";
 import Logo from "../../assets/caridentlogo2.png";
+import { ModeToggle } from "../mode-toggle";
+import { Button } from "../ui/button";
 
 const Navbar = ({ handleLoginPopup, isDarkTheme, toggleTheme }) => {
   return (
@@ -12,6 +14,7 @@ const Navbar = ({ handleLoginPopup, isDarkTheme, toggleTheme }) => {
               Carident
             </a>
             <div className="flex items-center">
+              <ModeToggle />
               <label className="switch">
                 <input type="checkbox" checked={isDarkTheme} onChange={toggleTheme} />
                 <span className="slider round"></span>
@@ -23,6 +26,7 @@ const Navbar = ({ handleLoginPopup, isDarkTheme, toggleTheme }) => {
               >
                 Login
               </a>
+              <Button>Test</Button>
             </div>
           </nav>
         </div>
