@@ -15,10 +15,6 @@ const Navbar = ({ handleLoginPopup, isDarkTheme, toggleTheme }) => {
             </a>
             <div className="flex items-center">
               <ModeToggle />
-              <label className="switch">
-                <input type="checkbox" checked={isDarkTheme} onChange={toggleTheme} />
-                <span className="slider round"></span>
-              </label>
               <a
                 href="#"
                 onClick={handleLoginPopup}
