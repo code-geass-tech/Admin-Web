@@ -28,8 +28,9 @@ import {
   AvatarFallback,
   AvatarImage,
 } from "@/components/ui/avatar"
+import DentistDialog from "../Dentist/DentistDialog";
 
-const AuthNav = () => {
+const ClinicNav = () => {
   return (
     <>
       <div className="bg-background-95 sticky top-0 z-50 border-b border-slate-100 backdrop-blur-sm dark:border-gray-800 dark:bg-zinc-950/60">
@@ -41,6 +42,7 @@ const AuthNav = () => {
             </a>
             <div className="flex items-center gap-2">
               <ModeToggle />
+              <DentistDialog />
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Avatar>
@@ -81,4 +83,4 @@ const AuthNav = () => {
     </>
   )
 }
-export default AuthNav
+export default ClinicNav

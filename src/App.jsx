@@ -6,8 +6,10 @@ import AuthLayout from "./components/AuthLayout";
 import Layout from "./components/Layout";
 import Appointments from "./routes/Appointments";
 import Reports from "./routes/Reports";
+import Dashboard from "./routes/Dashboard";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ClinicLayout from "./components/ClinicLayout";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +39,16 @@ const router = createBrowserRouter([
       {
         path: "reports/",
         element: <Reports />
+      }
+    ]
+  },
+  {
+    path: "/",
+    element: <ClinicLayout />,
+    children: [
+      {
+        path: "dashboard/",
+        element: <Dashboard />
       }
     ]
   }
