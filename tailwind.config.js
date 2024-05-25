@@ -10,7 +10,7 @@ module.exports = {
   prefix: "",
   theme: {
     fontFamily: {
-      'sans': ['Open Sans', 'sans-serif']
+      'sans': ['Inter', 'sans-serif']
     },
     container: {
       center: true,
