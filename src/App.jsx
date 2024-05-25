@@ -5,6 +5,7 @@ import Landing  from "@/routes/Landing";
 import AuthLayout from "./components/AuthLayout";
 import Layout from "./components/Layout";
 import Appointments from "./routes/Appointments";
+import Reports from "./routes/Reports";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
@@ -26,6 +27,16 @@ const router = createBrowserRouter([
       {
         path: "appointments/",
         element: <Appointments />
+      }
+    ]
+  },
+  {
+    path: "/",
+    element: <AuthLayout />,
+    children: [
+      {
+        path: "reports/",
+        element: <Reports />
       }
     ]
   }

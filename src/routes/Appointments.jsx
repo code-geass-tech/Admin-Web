@@ -1,9 +1,68 @@
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table"
+import React, { useEffect, useState } from "react";
+
 const Appointments = () => {
+  const [users, setUsers] = useState([
+    {
+      name: "John Doe",
+      date: "02-02-2003",
+      time: "7:01 AM",
+      email: "johndoe@gmail.com",
+      image: "View",
+      status: "Pending"
+    },
+    {
+      name: "John Doe",
+      date: "02-02-2003",
+      time: "7:01 AM",
+      email: "johndoe@gmail.com",
+      image: "View",
+      status: "Pending"
+    }, {
+      name: "John Doe",
+      date: "02-02-2003",
+      time: "7:01 AM",
+      email: "johndoe@gmail.com",
+      image: "View",
+      status: "Pending"
+    },
+  ]);
+
   return (
-    <div className="d-flex"> 
-    <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl dark:text-white">
-      Appointments
-    </h1>
+    <div className="d-flex">
+      <Table>
+        <TableCaption>A list of your recent appointments.</TableCaption>
+        <TableHeader>
+          <TableRow>
+            <TableHead className="w-[200px]">Name</TableHead>
+            <TableHead>Date</TableHead>
+            <TableHead>Time</TableHead>
+            <TableHead>Email</TableHead>
+            <TableHead>Image</TableHead>
+            <TableHead >Status</TableHead>
+          </TableRow>
+        </TableHeader>
+        <TableBody className="bg-white text-black dark:bg-zinc-950 dark:text-zinc-50">
+          {users.map((user, index) => (
+            <TableRow>
+              <TableCell>{user.name}</TableCell>
+              <TableCell>{user.date}</TableCell>
+              <TableCell>{user.time}</TableCell>
+              <TableCell>{user.email}</TableCell>
+              <TableCell>{user.image}</TableCell>
+              <TableCell>{user.status}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
     </div>
   )
 }
