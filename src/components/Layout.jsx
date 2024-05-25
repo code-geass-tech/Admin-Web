@@ -3,7 +3,7 @@ import Navbar from "./Navbar/Navbar"
 
 const Layout = () => {
   return (
-    <main className="dark:bg-zinc-950">
+    <main className="min-h-screen dark:bg-zinc-950">
       <Navbar />
       <Outlet />
     </main>

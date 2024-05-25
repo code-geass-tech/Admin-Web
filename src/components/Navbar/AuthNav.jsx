@@ -2,6 +2,7 @@ import { Button } from "../ui/button"
 import Logo from "../../assets/caridentlogo2.png";
 const AuthNav = () => {
   return (
+    <>
       <div className="bg-background-95 sticky top-0 z-50 border-b border-slate-100 backdrop-blur-sm dark:border-gray-800 dark:bg-zinc-950/60">
         <div className="container">
           <nav className="flex items-center justify-between">
@@ -15,6 +16,7 @@ const AuthNav = () => {
           </nav>
         </div>
       </div>
+    </>
   )
 }
 export default AuthNav
