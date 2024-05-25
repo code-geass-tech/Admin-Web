@@ -1,11 +1,12 @@
+import { Outlet } from "react-router-dom"
+import Navbar from "./Navbar/Navbar"
 
-const Layout = ({ children }) => {
+const Layout = () => {
   return (
-    <>
     <main className="dark:bg-zinc-950">
-        { children }
+      <Navbar />
+      <Outlet />
     </main>
-    </>
   )
 }
 export default Layout
