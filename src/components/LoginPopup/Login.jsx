@@ -1,11 +1,18 @@
 import React, { useState } from "react";
-import { FcGoogle } from "react-icons/fc";
-import { FaEye, FaEyeSlash, FaLinkedinIn } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Input } from "@/components/ui/input"
 import { Label } from '@/components/ui/label'
+import { Button } from "@/components/ui/button";
 
 const Login = ({ handleSignIn }) => {
+  const [username, setUsername] = useState("")
+  const [password, setPassword] = useState("")
   const [showPassword, setShowPassword] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // call api
+  }
 
   return (
     <>
@@ -13,13 +20,13 @@ const Login = ({ handleSignIn }) => {
         <h1 className="mb-4 text-center text-2xl font-semibold text-gray-600">
           Log in
         </h1>
-        <form className="flex flex-col gap-3 p-3">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-3 p-3">
           <div>
             <Label htmlFor="email">Email</Label>
             <Input type="email" placeholder="Enter your email" /> 
           </div>
           <div>
-          <Label htmlFor="email">Password</Label>
+            <Label htmlFor="email">Password</Label>
             <div className="relative">
               <Input
                 placeholder="Enter your password"
@@ -39,15 +46,8 @@ const Login = ({ handleSignIn }) => {
               )}
             </div>
           </div>
+          <Button>Submit</Button>
         </form>
-        <button className="transition-200 mt-7 block w-full rounded-full bg-blue-500 px-5 py-1 text-white hover:bg-blue-500/80">
-          Submit
-        </button>
-        <p className="my-3 text-center text-sm text-gray-500">or login with</p>
-        <div className="flex justify-center gap-4">
-          <FcGoogle className="transition-200 text-2xl grayscale hover:grayscale-0 " />
-          <FaLinkedinIn className="transition-200 text-2xl text-gray-600 hover:text-blue-600" />
-        </div>
         <p
           className="my-3 cursor-pointer text-center text-sm text-gray-500 hover:text-blue-700"
           onClick={handleSignIn}

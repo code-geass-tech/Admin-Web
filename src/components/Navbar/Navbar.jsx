@@ -2,20 +2,22 @@ import React from "react";
 import Logo from "../../assets/caridentlogo2.png";
 import { ModeToggle } from "../mode-toggle";
 import { Button } from "../ui/button";
+import LoginDialog from "../LoginPopup/LoginDialog";
 
 const Navbar = ({ handleLoginPopup }) => {
+
   return (
     <>
-      <main className="shadow-lg bg-white/70 backdrop-blur-sm dark:bg-gray-900/70">
+      <main className="bg-background-95 sticky top-0 z-50 border-b border-slate-100 backdrop-blur-sm dark:border-gray-800 dark:bg-zinc-950/60">
         <div className="container">
-          <nav className="flex justify-between items-center">
-            <a href="#" className="text-gray-800 dark:text-white text-3xl font-bold mt-2">
-              <img src={Logo} alt="Logo" className="h-10 inline mr-1 mb-3" />
+          <nav className="flex items-center justify-between">
+            <a href="#" className="mt-2 text-2xl text-gray-800 dark:text-white">
+              <img src={Logo} alt="Logo" className="mb-3 mr-1 inline h-10" />
               Carident
             </a>
-            <div className="flex gap-2 items-center">
+            <div className="flex items-center gap-2">
               <ModeToggle />
-              <Button onClick={handleLoginPopup}>Login</Button>
+              <LoginDialog />
             </div>
           </nav>
         </div>
