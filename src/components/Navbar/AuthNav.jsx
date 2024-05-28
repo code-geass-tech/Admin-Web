@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/dialog"
 
 import {
+  Hospital,
   LogOut,
   Settings,
   User
@@ -55,12 +56,12 @@ const AuthNav = () => {
                     <DropdownMenuItem>
                       <Dialog>
                       <User className="mr-2 h-4 w-4" />
-                      <span>Profile</span>
+                      <span>Users</span>
                       </Dialog>
                     </DropdownMenuItem>
                     <DropdownMenuItem>
-                      <User className="mr-2 h-4 w-4" />
-                      <span>Profile</span>
+                      <Hospital className="mr-2 h-4 w-4" />
+                      <span>Clinic</span>
                     </DropdownMenuItem>
                     <DropdownMenuItem>
                       <Settings className="mr-2 h-4 w-4" />
